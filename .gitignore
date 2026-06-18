@@ -216,3 +216,32 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Private/raw
+raw/
+private/
+credentials/
+unredacted/
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Node/BTP optional
+node_modules/
+dist/
+gen/
+coverage/
+
+# Sensitive archives
+*.zip
+*.7z
+*.rar
+*_unredacted.*
+*_credentials.*
