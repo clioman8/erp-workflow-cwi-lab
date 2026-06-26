@@ -1,0 +1,9 @@
+source_field,target_field,transformation_rule,notes
+action_id,source_action_id,copy,practice action ID becomes source reference
+timestamp,timestamp,parse_datetime,convert to ISO-like timestamp
+lab_id,process,derive_process,derive process from lab_id or menu
+ecount_menu,activity,map_menu_to_activity,map menu/action pair to standardized activity
+object_code,object_code,copy,object involved in event
+observed_effect,status,derive_status,completed/pending/exception based on effect
+notes,exception_type,derive_exception,detect known exception marker from notes
+data_origin,data_origin,copy,preserve evidence classification

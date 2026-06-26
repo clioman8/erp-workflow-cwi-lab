@@ -1,0 +1,16 @@
+activity,process,description,expected_actor_role,normal_or_exception
+Purchase Order Created,P2P,Create purchase order,buyer,normal
+PO Line Added,P2P,Add item line to PO,buyer,normal
+Goods Received,P2P,Receive goods from supplier,warehouse_operator,normal
+Goods Partially Received,P2P,Receive less than ordered quantity,warehouse_operator,exception
+Backorder Recorded,P2P,Record remaining quantity,buyer,exception
+Inventory Updated,P2P;O2C;Manufacturing,ERP stock is updated,system,normal
+Sales Order Received,O2C,Create customer order,sales_operator,normal
+Availability Checked,O2C,Check finished goods availability,system,normal
+Goods Issued,O2C,Issue goods to customer,warehouse_operator,normal
+Work Order Created,Manufacturing,Create work order,production_planner,normal
+BOM Components Calculated,Manufacturing,Calculate BOM requirements,system,normal
+Material Shortage Detected,Manufacturing,Detect shortage,system,exception
+Production Receipt Created,Manufacturing,Receive production output,production_operator,normal
+QC Hold Applied,Manufacturing,Block inventory for quality,quality_checker,exception
+QC Released,Manufacturing,Release inventory from QC hold,quality_checker,normal

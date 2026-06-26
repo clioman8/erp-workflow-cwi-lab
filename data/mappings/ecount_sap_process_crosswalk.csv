@@ -1,0 +1,13 @@
+ecount_process,generic_process,sap_concept,mapping_level,confidence,notes
+발주서입력,Purchase Order,Purchase Order,process_level,high,Conceptual mapping only
+구매입력,Goods Receipt/Purchase Posting,Procurement Execution,process_level,medium,Not a one-to-one transaction mapping
+품목등록,Item Master,Product / Material Master,master_data,high,Conceptual mapping
+창고등록,Warehouse / Storage Location,Plant / Storage Location / Warehouse concept,master_data,medium,Different configuration depth
+거래처등록,Business Partner,Business Partner,master_data,high,Supplier/customer distinction may differ
+주문서입력,Sales Order,Sales Order,process_level,high,Conceptual mapping
+판매입력,Goods Issue / Sales Posting,Outbound Delivery / Billing-related process,process_level,medium,SAP process is more layered
+BOM(소요량)조회,Bill of Materials,BOM,master_data/production,high,Conceptual mapping
+작업지시서입력,Work Order,Production Order,process_level,high,Conceptual mapping
+생산입고,Production Receipt,Goods Receipt from Production,process_level,medium,Posting logic may differ
+재고조회,Inventory Visibility,Stock Overview,reporting,high,Conceptual mapping
+품질보류창고,QC Hold / Blocked Stock,Quality Inspection / Blocked Stock concept,process_level,medium,Modeled by warehouse/status
