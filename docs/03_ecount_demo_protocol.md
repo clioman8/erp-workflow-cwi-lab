@@ -1,197 +1,223 @@
-## 3. Binomial Coefficients and Scenario Space
+# docs/03_ecount_demo_protocol.md
 
-The binomial coefficient counts the number of ways to choose k factors from n factors.
+# ECOUNT Demo Protocol
 
-In CWI, this becomes a way to count workflow exception scenarios.
+## 1. Purpose
 
-If there are m binary exception factors, then the total number of possible scenarios is:
+This document defines how the ECOUNT ERP demo environment is used in this project.
 
-```text
-2^m
-```
+ECOUNT is used as a practical ERP demo environment for observing and reconstructing workflow behavior.
 
-If m = 6, then there are:
+The goal is not to claim full production ERP implementation experience.
 
-```text
-2^6 = 64
-```
+The goal is to use ECOUNT as a controlled workflow laboratory for CWI analysis.
 
-possible exception combinations.
+## 2. Data Safety Rule
 
-For six factors:
+The ECOUNT demo environment may contain shared sample data.
 
-```text
-F1 = partial_receipt
-F2 = material_shortage
-F3 = warehouse_error
-F4 = bom_variance
-F5 = qc_hold
-F6 = approval_delay
-```
+This project must not expose data created by other users.
 
-A scenario can be represented as a binary vector.
+Public repository materials should contain only:
 
-```text
-000000 = no exception
-100000 = partial receipt only
-010000 = material shortage only
-110000 = partial receipt + material shortage
-```
+* self-created CWI-prefixed records
+* sanitized screenshots
+* reconstructed event logs
+* synthetic data
+* generalized workflow notes
 
-## 4. Pascal Row Interpretation
+## 3. Naming Prefix
 
-For six factors, Pascal row 6 is:
+All project-created demo records should use the prefix:
 
 ```text
-1, 6, 15, 20, 15, 6, 1
+CWI26_
 ```
 
-This means:
-
-| Active exception count | Number of scenarios |
-| ---------------------: | ------------------: |
-|                      0 |                   1 |
-|                      1 |                   6 |
-|                      2 |                  15 |
-|                      3 |                  20 |
-|                      4 |                  15 |
-|                      5 |                   6 |
-|                      6 |                   1 |
-
-This helps define a practical experiment design.
-
-Instead of testing all 64 scenarios at once, the project can start with:
-
-```text
-C(6,0) + C(6,1) + C(6,2)
-= 1 + 6 + 15
-= 22 scenarios
-```
-
-This produces:
-
-* 1 baseline scenario
-* 6 single-factor scenarios
-* 15 two-factor interaction scenarios
-
-## 5. Binary Encoding
-
-Each scenario is encoded as a bitmask.
-
-Example:
-
-```text
-CWI-000000 = baseline
-CWI-100000 = partial receipt
-CWI-010000 = material shortage
-CWI-001000 = warehouse error
-CWI-000100 = BOM variance
-CWI-000010 = QC hold
-CWI-000001 = approval delay
-```
-
-The number of active exception factors is the Hamming weight.
-
-```text
-h(x) = sum of active bits
-```
+This makes project data easier to identify, filter, export, and sanitize.
 
 Examples:
 
 ```text
-h(000000) = 0
-h(100000) = 1
-h(110000) = 2
-h(111000) = 3
+CWI26_RM_PCB
+CWI26_RM_SENSOR
+CWI26_FG_KIT
+CWI26_VENDOR_A
+CWI26_CUSTOMER_A
+CWI26_RAW
+CWI26_WIP
+CWI26_FG
 ```
 
-This allows workflow stress to be modeled by the number and combination of active exceptions.
+## 4. Demo Company Scenario
 
-## 6. Modulo-2 and Digital Pattern View
+The fictional operating scenario is:
 
-Pascal’s Triangle modulo 2 reveals hidden digital structures.
+```text
+CWI Smart Sensor Lab
+```
 
-CWI does not claim that ERP workflows literally follow Pascal’s Triangle.
+The company purchases raw materials, produces a smart sensor kit, stores finished goods, and ships them to customers.
 
-Instead, CWI borrows the digital perspective.
+The scenario includes:
 
-A workflow scenario can be treated as a binary object.
+* raw material purchasing
+* inventory receiving
+* BOM-based production
+* finished goods receipt
+* sales order shipment
+* QC hold
+* warehouse correction
+* approval delay simulation
+* exception tracking
 
-A set of exceptions can be marked as active or inactive.
+## 5. Master Data Setup
 
-The resulting pattern can be visualized, counted, grouped, and analyzed.
+The first lab creates master data.
 
-This makes the workflow easier to reason about.
+### Warehouses
 
-## 7. From Algebra to Workflow
+* CWI26_RAW
+* CWI26_WIP
+* CWI26_FG
+* CWI26_QC
+* CWI26_RETURN
+* CWI26_SCRAP
 
-The mathematical analogy can be summarized as follows.
+### Business Partners
 
-| Mathematical structure   | Workflow structure           |
-| ------------------------ | ---------------------------- |
-| Binomial coefficient     | Number of workflow scenarios |
-| Pascal’s Triangle        | Scenario-space organization  |
-| Local recursive rule     | Local workflow rule          |
-| Modulo-2 digital pattern | Binary exception encoding    |
-| Combination of k factors | k active workflow exceptions |
-| Global pattern           | End-to-end workflow behavior |
+* CWI26_VENDOR_A
+* CWI26_VENDOR_B
+* CWI26_CUSTOMER_A
+* CWI26_CUSTOMER_B
+* CWI26_OUTSOURCE_A
+* CWI26_INTERNAL_QC
 
-## 8. Interaction Effects
+### Items
 
-CWI is not only interested in single exceptions.
+* CWI26_RM_PCB
+* CWI26_RM_SENSOR
+* CWI26_RM_CABLE
+* CWI26_RM_CASE
+* CWI26_PKG_BOX
+* CWI26_SUB_CTRL
+* CWI26_FG_KIT
 
-It is especially interested in interactions.
+### BOM
 
-If two exceptions occur together, the total delay may be larger than the sum of each separate delay.
+Subassembly BOM:
+
+```text
+CWI26_SUB_CTRL =
+1 x CWI26_RM_PCB
+2 x CWI26_RM_CABLE
+```
+
+Finished good BOM:
+
+```text
+CWI26_FG_KIT =
+1 x CWI26_SUB_CTRL
+1 x CWI26_RM_SENSOR
+1 x CWI26_RM_CASE
+1 x CWI26_PKG_BOX
+```
+
+## 6. Practice Action Log
+
+Every manual action in ECOUNT should be recorded in:
+
+```text
+ecount_lab/practice_action_log.csv
+```
+
+Recommended columns:
+
+```csv
+action_id,timestamp,lab_id,ecount_menu,action_type,object_type,object_code,object_name,input_summary,expected_effect,observed_effect,evidence_ref,notes,data_origin
+```
 
 Example:
 
-```text
-material_shortage + qc_hold
+```csv
+ACT-0001,2026-06-20 10:00,LAB-01,품목등록,create,item,CWI26_RM_PCB,CWI26 제어 PCB,EA unit and barcode entered,Item master created,Created in demo list,EV-001,Sanitized screenshot saved,ecount_demo_observation
 ```
 
-This may create more workflow stress than either factor alone.
+## 7. Event Log Reconstruction
 
-A simple interaction effect can be defined as:
+ECOUNT may not provide a complete process-mining event log directly.
+
+Therefore, this project reconstructs event logs from:
+
+* manual action logs
+* exported lists
+* screenshots
+* observed workflow sequence
+* synthetic exception scenarios
+
+The reconstructed event log is stored in:
 
 ```text
-I_ij = L_ij - L_i - L_j + L_0
+data/event_logs/synthetic_integrated_event_log.csv
 ```
 
-Where:
+## 8. Evidence Policy
 
-* L_0 = baseline cycle time
-* L_i = cycle time with factor i
-* L_j = cycle time with factor j
-* L_ij = cycle time with both factors i and j
+Screenshots may be used as private evidence.
 
-If I_ij is positive, the combined scenario creates additional delay beyond the two separate effects.
+Public screenshots must be sanitized.
 
-## 9. Why This Matters
+Sanitization rules:
 
-ERP workflows often fail not because of one large error, but because of several small conditions occurring together.
+* show only CWI26-prefixed records
+* crop unrelated rows
+* blur or remove names, phone numbers, emails, addresses, IDs, or other private data
+* avoid showing other users’ demo data
+* do not expose login information
 
-Examples:
+Recommended evidence folder:
 
-* partial receipt + wrong warehouse
-* material shortage + approval delay
-* BOM variance + QC hold
-* urgent sales order + inventory mismatch
-* production delay + shipment deadline
+```text
+ecount_lab/evidence/screenshots/
+```
 
-CWI uses combinatorial thinking to identify these risky combinations.
+## 9. Lab Sequence
 
-## 10. Final Summary
+The recommended lab sequence is:
 
-The mathematical foundation of CWI is not abstract decoration.
+1. Master data setup
+2. P2P purchasing and receiving
+3. Manufacturing BOM and work order
+4. Production receipt and inventory update
+5. O2C sales order and shipment
+6. MPS/MRP observation
+7. Traceability and QC hold simulation
+8. Combinatorial exception scenario design
 
-It provides a practical way to:
+## 10. Public Repository Policy
 
-* define exception factors
-* enumerate workflow scenarios
-* encode scenarios as bitmasks
-* measure combinatorial stress
-* identify interaction effects
-* connect local workflow rules to global operational patterns
+The public repository should contain:
 
-CWI therefore extends the idea of “small rules create large patterns” from Pascal’s Triangle into ERP workflow intelligence.
+* sanitized summaries
+* synthetic event logs
+* master data CSVs
+* process diagrams
+* analysis scripts
+* CWI reports
+
+The public repository should not contain:
+
+* raw screenshots with unrelated data
+* private ECOUNT account information
+* customer data
+* login credentials
+* other users’ demo records
+* unsanitized exports
+
+## 11. Final Summary
+
+ECOUNT is used as a workflow laboratory.
+
+The project does not depend on perfect ERP data extraction.
+
+Instead, it combines demo observation, synthetic event reconstruction, and combinatorial scenario design to study ERP workflow intelligence.
