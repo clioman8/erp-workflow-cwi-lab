@@ -1,0 +1,2 @@
+case_id,timestamp,process,activity,actor_role,object_code,quantity,from_location,to_location,status,exception_type,source_action_id,data_origin,reason
+O2C-002,2026-06-24 09:10:00,O2C,Approval Requested,sales_operator,CWI26_SO_002,1,CWI26_CUSTOMER_A,CWI26_FG,pending,approval_delay,ACT-0111,synthetic_only,approval-related event or approval-delay exception

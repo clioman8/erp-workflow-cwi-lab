@@ -1,0 +1,7 @@
+mapping_level,confidence,count
+master_data,high,2
+master_data,medium,1
+master_data/production,high,1
+process_level,high,3
+process_level,medium,4
+reporting,high,1

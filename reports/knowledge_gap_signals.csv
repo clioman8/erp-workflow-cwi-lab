@@ -1,0 +1,6 @@
+case_id,timestamp,process,activity,actor_role,object_code,quantity,from_location,to_location,status,exception_type,source_action_id,data_origin,knowledge_gap_signal
+MFG-002,2026-06-21 13:10:00,Manufacturing,Material Shortage Detected,system,CWI26_RM_SENSOR,5,CWI26_RAW,CWI26_WIP,exception,material_shortage,ACT-0072,ecount_reconstructed,planning and availability knowledge gap
+P2P-003,2026-06-22 09:15:00,P2P,Warehouse Error Detected,warehouse_operator,CWI26_RM_CASE,10,CWI26_QC,CWI26_RAW,exception,warehouse_error,ACT-0081,ecount_reconstructed,warehouse selection / inventory location knowledge gap
+MFG-003,2026-06-22 13:25:00,Manufacturing,Actual Material Usage Entered,production_operator,CWI26_RM_CABLE,22,CWI26_RAW,CWI26_WIP,exception,bom_variance,ACT-0092,ecount_reconstructed,BOM standard-vs-actual usage knowledge gap
+MFG-004,2026-06-23 14:00:00,Manufacturing,QC Hold Applied,quality_checker,CWI26_FG_KIT,10,CWI26_QC,CWI26_QC,on_hold,qc_hold,ACT-0102,synthetic_only,quality status and release workflow knowledge gap
+O2C-002,2026-06-24 09:10:00,O2C,Approval Requested,sales_operator,CWI26_SO_002,1,CWI26_CUSTOMER_A,CWI26_FG,pending,approval_delay,ACT-0111,synthetic_only,authority and approval-rule knowledge gap

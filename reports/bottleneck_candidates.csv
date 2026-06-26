@@ -1,0 +1,16 @@
+activity,event_count,exception_count,bottleneck_proxy_score
+Actual Material Usage Entered,1,1,2
+Approval Requested,1,1,2
+Goods Partially Received,1,1,2
+QC Hold Applied,1,1,2
+Warehouse Error Detected,1,1,2
+Material Shortage Detected,1,1,2
+Availability Checked,1,0,1
+Goods Received,1,0,1
+Goods Issued,1,0,1
+BOM Components Calculated,1,0,1
+Inventory Updated,1,0,1
+Purchase Order Created,1,0,1
+Production Receipt Created,1,0,1
+Sales Order Received,1,0,1
+Work Order Created,1,0,1

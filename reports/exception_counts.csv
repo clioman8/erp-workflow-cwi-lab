@@ -1,0 +1,7 @@
+exception_type,count
+partial_receipt,1
+material_shortage,1
+warehouse_error,1
+bom_variance,1
+qc_hold,1
+approval_delay,1

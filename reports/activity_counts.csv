@@ -1,0 +1,16 @@
+activity,count
+Purchase Order Created,1
+Goods Received,1
+Inventory Updated,1
+Work Order Created,1
+BOM Components Calculated,1
+Production Receipt Created,1
+Sales Order Received,1
+Availability Checked,1
+Goods Issued,1
+Goods Partially Received,1
+Material Shortage Detected,1
+Warehouse Error Detected,1
+Actual Material Usage Entered,1
+QC Hold Applied,1
+Approval Requested,1
