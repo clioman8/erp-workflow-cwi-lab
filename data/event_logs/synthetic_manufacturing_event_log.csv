@@ -1,0 +1,5 @@
+case_id,timestamp,process,activity,actor_role,object_code,quantity,from_location,to_location,status,exception_type,source_action_id,data_origin
+MFG-001,2026-06-20 13:00,Manufacturing,Work Order Created,production_planner,CWI26_FG_KIT,10,,CWI26_WIP,completed,,ACT-0030,ecount_reconstructed
+MFG-001,2026-06-20 13:10,Manufacturing,BOM Components Calculated,system,CWI26_FG_KIT,10,,CWI26_WIP,completed,,ACT-0031,ecount_reconstructed
+MFG-001,2026-06-20 13:20,Manufacturing,Production Receipt Created,production_operator,CWI26_FG_KIT,10,CWI26_WIP,CWI26_FG,completed,,ACT-0032,ecount_reconstructed
+MFG-001,2026-06-20 13:25,Manufacturing,Inventory Updated,system,CWI26_FG_KIT,10,CWI26_WIP,CWI26_FG,completed,,ACT-0033,ecount_reconstructed
