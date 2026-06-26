@@ -1,4 +1,0 @@
-case_id,timestamp,process,activity,actor_role,object_code,quantity,from_location,to_location,status,exception_type,source_action_id,data_origin
-P2P-001,2026-06-20 11:00,P2P,Purchase Order Created,buyer,CWI26_RM_PCB,20,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0020,ecount_reconstructed
-P2P-001,2026-06-20 11:10,P2P,Goods Received,warehouse_operator,CWI26_RM_PCB,20,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0021,ecount_reconstructed
-P2P-001,2026-06-20 11:15,P2P,Inventory Updated,system,CWI26_RM_PCB,20,,CWI26_RAW,completed,,ACT-0022,ecount_reconstructed

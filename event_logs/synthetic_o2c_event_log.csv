@@ -1,4 +1,0 @@
-case_id,timestamp,process,activity,actor_role,object_code,quantity,from_location,to_location,status,exception_type,source_action_id,data_origin
-O2C-001,2026-06-20 14:00,O2C,Sales Order Received,sales_operator,CWI26_FG_KIT,6,CWI26_FG,CWI26_CUSTOMER_A,completed,,ACT-0040,ecount_reconstructed
-O2C-001,2026-06-20 14:10,O2C,Availability Checked,system,CWI26_FG_KIT,6,CWI26_FG,,completed,,ACT-0041,ecount_reconstructed
-O2C-001,2026-06-20 14:20,O2C,Goods Issued,warehouse_operator,CWI26_FG_KIT,6,CWI26_FG,CWI26_CUSTOMER_A,completed,,ACT-0042,ecount_reconstructed
