@@ -1,0 +1,28 @@
+# CITATION.cff
+
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+title: "ERP Workflow CWI Lab: Combinatorial Workflow Intelligence for ERP Event Logs"
+authors:
+
+* family-names: "Park"
+  given-names: "Beomsoo"
+  abstract: "This project studies ERP workflow visibility through ECOUNT ERP demo workflows, synthetic event logs, and Combinatorial Workflow Intelligence (CWI). CWI models ERP workflows as combinations of activities, roles, handoffs, constraints, approvals, exceptions, and operational outcomes. SAP S/4HANA Cloud Public Edition is used as a conceptual comparison layer where direct practice access is limited."
+  keywords:
+* "Combinatorial Workflow Intelligence"
+* "ERP"
+* "ECOUNT"
+* "SAP S/4HANA"
+* "workflow analysis"
+* "event logs"
+* "process intelligence"
+* "operational intelligence"
+* "BOM"
+* "MRP"
+* "P2P"
+* "O2C"
+  license: "MIT"
+  version: "0.1.0"
+  date-released: "2026-06-26"
+  repository-code: "https://github.com/clioman8/erp-workflow-cwi-lab"
+
