@@ -1,5 +1,3 @@
-# CITATION.cff
-
 cff-version: 1.2.0
 message: "If you use this project, please cite it as below."
 title: "ERP Workflow CWI Lab: Combinatorial Workflow Intelligence for ERP Event Logs"
