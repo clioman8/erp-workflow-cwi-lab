@@ -1,4 +1,4 @@
-# docs/05_sap_public_edition_crosswalk.md
+# docs/05_erp_public_edition_crosswalk.md
 
 # SAP Public Edition Crosswalk
 
