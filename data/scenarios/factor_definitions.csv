@@ -1,0 +1,7 @@
+factor_code,factor_name,0_state,1_state,ecount_possible,related_process,description
+F1,partial_receipt,full_receipt,partial_receipt,yes,P2P,Only part of ordered quantity is received
+F2,material_shortage,sufficient,shortage,yes,Manufacturing;Planning,Required material is insufficient for production
+F3,warehouse_error,correct_warehouse,wrong_warehouse,yes,P2P;Inventory,Item is posted or moved to wrong warehouse
+F4,bom_variance,standard_usage,usage_variance,yes,Manufacturing,Actual component usage differs from standard BOM
+F5,qc_hold,released,on_hold,partial,Manufacturing;Traceability,Inventory is blocked by quality hold
+F6,approval_delay,on_time,delayed,synthetic_only,P2P;O2C;Manufacturing,Manager approval delays workflow release

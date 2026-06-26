@@ -1,0 +1,4 @@
+baseline_id,process,scenario_id,description,expected_sequence,exception_type,execution_mode
+BASE-P2P,P2P,CWI-000000,baseline purchase and receipt,Purchase Order Created>Goods Received>Inventory Updated,none,ecount_observed
+BASE-MFG,Manufacturing,CWI-000000,baseline work order and production receipt,Work Order Created>BOM Components Calculated>Material Issued>Production Receipt Created>Inventory Updated,none,ecount_observed
+BASE-O2C,O2C,CWI-000000,baseline sales order and goods issue,Sales Order Received>Availability Checked>Goods Issued>Inventory Updated,none,ecount_observed

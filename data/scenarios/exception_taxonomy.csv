@@ -1,0 +1,9 @@
+exception_type,description,related_factor,process,expected_effect,ecount_possible,synthetic_handling
+partial_receipt,Only part of ordered quantity is received,F1,P2P,Backorder and purchasing delay,yes,Observed through purchase quantity difference
+material_shortage,Required material is insufficient for work order,F2,Manufacturing;Planning,Work order delay or hold,yes,Observed or reconstructed through inventory shortage
+warehouse_error,Item is posted to wrong warehouse,F3,P2P;Inventory,Inventory visibility error and correction delay,yes,Observed through transfer correction
+bom_variance,Actual material usage differs from standard BOM,F4,Manufacturing,Usage variance and review,yes,Observed or reconstructed through production input difference
+qc_hold,Inventory is blocked for quality inspection,F5,Manufacturing;Traceability,Blocked finished goods and release delay,partial,Modeled using QC warehouse and synthetic release event
+approval_delay,Manager approval delays next workflow step,F6,P2P;O2C;Manufacturing,Waiting time and role bottleneck,partial,Modeled synthetically if demo approval workflow is limited
+partial_receipt_plus_warehouse_error,Partial receipt occurs and item is posted to wrong warehouse,F1+F3,P2P;Inventory,Backorder plus inventory correction delay,yes,Observed or reconstructed
+material_shortage_plus_qc_hold,Material shortage and QC hold occur in same production case,F2+F5,Manufacturing,Incomplete output and blocked finished goods,hybrid,Partly observed and partly synthetic
