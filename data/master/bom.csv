@@ -1,0 +1,3 @@
+action_id,timestamp,lab_id,ecount_menu,action_type,object_type,object_code,object_name,input_summary,expected_effect,observed_effect,evidence_ref,notes,data_origin
+ACT-0010,2026-06-20 10:30,LAB-02,BOM(소요량)조회,create,bom,CWI26_SUB_CTRL_BOM,CWI26 제어부 반제품 BOM,"PCB 1 + Cable 2",BOM created,BOM visible in inquiry,EV-010,Two-level BOM starts here,ecount_demo_observation
+ACT-0011,2026-06-20 10:40,LAB-02,BOM(소요량)조회,create,bom,CWI26_FG_KIT_BOM,CWI26 스마트 센서 키트 BOM,"SUB_CTRL 1 + SENSOR 1 + CASE 1 + BOX 1",BOM created,BOM visible in inquiry,EV-011,Finished-good BOM,ecount_demo_observation
