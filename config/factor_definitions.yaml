@@ -1,0 +1,42 @@
+factors:
+  F1:
+    name: partial_receipt
+    normal_state: full_receipt
+    exception_state: partial_receipt
+    process: P2P
+    ecount_possible: yes
+
+  F2:
+    name: material_shortage
+    normal_state: sufficient
+    exception_state: shortage
+    process: Manufacturing
+    ecount_possible: yes
+
+  F3:
+    name: warehouse_error
+    normal_state: correct_warehouse
+    exception_state: wrong_warehouse
+    process: Inventory
+    ecount_possible: yes
+
+  F4:
+    name: bom_variance
+    normal_state: standard_usage
+    exception_state: usage_variance
+    process: Manufacturing
+    ecount_possible: yes
+
+  F5:
+    name: qc_hold
+    normal_state: released
+    exception_state: on_hold
+    process: Traceability
+    ecount_possible: partial
+
+  F6:
+    name: approval_delay
+    normal_state: on_time
+    exception_state: delayed
+    process: Approval
+    ecount_possible: synthetic_only

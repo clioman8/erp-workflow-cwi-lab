@@ -1,0 +1,57 @@
+processes:
+  P2P:
+    description: "Procure-to-Pay purchasing and receiving workflow"
+    normal_sequence:
+      - Purchase Order Created
+      - PO Line Added
+      - Goods Received
+      - Inventory Updated
+    primary_roles:
+      - buyer
+      - warehouse_operator
+      - accountant
+      - manager
+      - system
+
+  O2C:
+    description: "Order-to-Cash sales and shipment workflow"
+    normal_sequence:
+      - Sales Order Received
+      - Availability Checked
+      - Goods Issued
+      - Inventory Updated
+    primary_roles:
+      - sales_operator
+      - warehouse_operator
+      - manager
+      - accountant
+      - system
+
+  Manufacturing:
+    description: "BOM-based production workflow"
+    normal_sequence:
+      - Work Order Created
+      - BOM Components Calculated
+      - Material Issued
+      - Production Receipt Created
+      - Inventory Updated
+    primary_roles:
+      - production_planner
+      - production_operator
+      - warehouse_operator
+      - quality_checker
+      - manager
+      - system
+
+  Traceability:
+    description: "Lot/serial and warehouse movement tracking"
+    normal_sequence:
+      - Lot Received
+      - Lot Material Issued
+      - Serial Finished Goods Created
+      - Serial Goods Shipped
+    primary_roles:
+      - warehouse_operator
+      - production_operator
+      - quality_checker
+      - system

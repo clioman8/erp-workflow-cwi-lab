@@ -1,0 +1,36 @@
+metrics:
+  case_cycle_time:
+    description: "max(timestamp) - min(timestamp) per case_id"
+    required_columns: [case_id, timestamp]
+
+  activity_frequency:
+    description: "count events by activity"
+    required_columns: [activity]
+
+  exception_frequency:
+    description: "count events by exception_type"
+    required_columns: [exception_type]
+
+  role_handoff_count:
+    description: "count actor_role changes inside each case"
+    required_columns: [case_id, timestamp, actor_role]
+
+  handoff_density:
+    description: "role_handoff_count / total_activity_count"
+    required_columns: [case_id, timestamp, actor_role, activity]
+
+  combinatorial_stress_level:
+    description: "hamming_weight of scenario bitmask"
+    source_file: "data/scenarios/scenario_design.csv"
+
+  scenario_coverage:
+    description: "executed scenarios / 2^m"
+    source_file: "data/scenarios/scenario_design.csv"
+
+  status_distribution:
+    description: "count events by status"
+    required_columns: [status]
+
+  data_origin_ratio:
+    description: "count events by data_origin"
+    required_columns: [data_origin]
