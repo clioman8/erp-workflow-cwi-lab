@@ -1,0 +1,7 @@
+warehouse_code,warehouse_name,warehouse_type,description,default_processes,inventory_status,location_role,is_virtual
+CWI26_RAW,Raw Material Warehouse,raw_material,Stores purchased raw materials before production,"P2P;Manufacturing",available,input_storage,false
+CWI26_WIP,Work-in-Process Warehouse,wip,Temporary location for production and semi-finished goods,Manufacturing,in_process,production_buffer,false
+CWI26_FG,Finished Goods Warehouse,finished_goods,Stores completed products before shipment,"Manufacturing;O2C",available,output_storage,false
+CWI26_QC,Quality Hold Warehouse,quality_hold,Temporary hold location for inspection or blocked goods,"Manufacturing;Traceability",blocked,quality_control,true
+CWI26_RETURN,Return Inspection Warehouse,return_hold,Temporary location for customer returns and inspection,"O2C;Return",blocked,reverse_logistics,true
+CWI26_SCRAP,Scrap Warehouse,scrap,Location for defective or unusable materials,"Manufacturing;Quality",scrapped,loss_tracking,true
