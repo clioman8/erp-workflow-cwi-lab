@@ -1,0 +1,7 @@
+partner_code,partner_name,partner_type,related_processes,description,risk_area,default_role
+CWI26_VENDOR_A,CWI26 Raw Material Supplier A,vendor,"P2P;Manufacturing",Primary supplier for PCB sensor cable and case materials,supply_delay,buyer
+CWI26_VENDOR_B,CWI26 Packaging Supplier B,vendor,"P2P;Manufacturing",Packaging supplier for finished goods,partial_receipt,buyer
+CWI26_CUSTOMER_A,CWI26 Finished Goods Customer A,customer,O2C,Primary customer for smart sensor kits,demand_variability,sales_operator
+CWI26_CUSTOMER_B,CWI26 Urgent Order Customer B,customer,O2C,Customer used for rush-order and approval-delay scenarios,approval_delay,sales_operator
+CWI26_OUTSOURCE_A,CWI26 Outsourced Assembly Partner,outsourcing_partner,"Manufacturing;P2P",External partner for outsourced assembly or rework,outsourcing_delay,production_planner
+CWI26_INTERNAL_QC,CWI26 Internal Quality Control,internal_department,"Manufacturing;Traceability",Internal quality checkpoint for hold release and defect review,qc_hold,quality_checker
