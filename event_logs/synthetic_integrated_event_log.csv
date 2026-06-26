@@ -1,0 +1,59 @@
+case_id,timestamp,process,activity,actor_role,object_code,quantity,from_location,to_location,status,exception_type,source_action_id,data_origin
+P2P-001,2026-06-20 09:00:00,P2P,Purchase Order Created,buyer,CWI26_PO_001,1,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0020,ecount_reconstructed
+P2P-001,2026-06-20 09:05:00,P2P,PO Line Added,buyer,CWI26_RM_PCB,20,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0021,ecount_reconstructed
+P2P-001,2026-06-20 09:06:00,P2P,PO Line Added,buyer,CWI26_RM_SENSOR,20,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0022,ecount_reconstructed
+P2P-001,2026-06-20 09:07:00,P2P,PO Line Added,buyer,CWI26_RM_CABLE,50,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0023,ecount_reconstructed
+P2P-001,2026-06-20 09:08:00,P2P,PO Line Added,buyer,CWI26_RM_CASE,20,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0024,ecount_reconstructed
+P2P-001,2026-06-20 09:09:00,P2P,PO Line Added,buyer,CWI26_PKG_BOX,20,CWI26_VENDOR_B,CWI26_RAW,completed,,ACT-0025,ecount_reconstructed
+P2P-001,2026-06-20 10:00:00,P2P,Goods Received,warehouse_operator,CWI26_RM_PCB,20,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0026,ecount_reconstructed
+P2P-001,2026-06-20 10:05:00,P2P,Goods Received,warehouse_operator,CWI26_RM_SENSOR,20,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0027,ecount_reconstructed
+P2P-001,2026-06-20 10:10:00,P2P,Goods Received,warehouse_operator,CWI26_RM_CABLE,50,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0028,ecount_reconstructed
+P2P-001,2026-06-20 10:15:00,P2P,Goods Received,warehouse_operator,CWI26_RM_CASE,20,CWI26_VENDOR_A,CWI26_RAW,completed,,ACT-0029,ecount_reconstructed
+P2P-001,2026-06-20 10:20:00,P2P,Goods Received,warehouse_operator,CWI26_PKG_BOX,20,CWI26_VENDOR_B,CWI26_RAW,completed,,ACT-0030,ecount_reconstructed
+P2P-001,2026-06-20 10:30:00,P2P,Inventory Updated,system,CWI26_RM_PCB,20,,CWI26_RAW,completed,,ACT-0031,ecount_reconstructed
+P2P-001,2026-06-20 10:31:00,P2P,Inventory Updated,system,CWI26_RM_SENSOR,20,,CWI26_RAW,completed,,ACT-0032,ecount_reconstructed
+P2P-001,2026-06-20 10:32:00,P2P,Inventory Updated,system,CWI26_RM_CABLE,50,,CWI26_RAW,completed,,ACT-0033,ecount_reconstructed
+P2P-001,2026-06-20 10:33:00,P2P,Inventory Updated,system,CWI26_RM_CASE,20,,CWI26_RAW,completed,,ACT-0034,ecount_reconstructed
+P2P-001,2026-06-20 10:34:00,P2P,Inventory Updated,system,CWI26_PKG_BOX,20,,CWI26_RAW,completed,,ACT-0035,ecount_reconstructed
+MFG-001,2026-06-20 13:00:00,Manufacturing,Work Order Created,production_planner,CWI26_WO_001,1,,CWI26_WIP,completed,,ACT-0040,ecount_reconstructed
+MFG-001,2026-06-20 13:05:00,Manufacturing,BOM Components Calculated,system,CWI26_FG_KIT_BOM,10,,CWI26_WIP,completed,,ACT-0041,ecount_reconstructed
+MFG-001,2026-06-20 13:10:00,Manufacturing,Material Issued,production_operator,CWI26_SUB_CTRL,10,CWI26_WIP,CWI26_WIP,completed,,ACT-0042,ecount_reconstructed
+MFG-001,2026-06-20 13:12:00,Manufacturing,Material Issued,production_operator,CWI26_RM_SENSOR,10,CWI26_RAW,CWI26_WIP,completed,,ACT-0043,ecount_reconstructed
+MFG-001,2026-06-20 13:14:00,Manufacturing,Material Issued,production_operator,CWI26_RM_CASE,10,CWI26_RAW,CWI26_WIP,completed,,ACT-0044,ecount_reconstructed
+MFG-001,2026-06-20 13:16:00,Manufacturing,Material Issued,production_operator,CWI26_PKG_BOX,10,CWI26_RAW,CWI26_WIP,completed,,ACT-0045,ecount_reconstructed
+MFG-001,2026-06-20 13:30:00,Manufacturing,Production Receipt Created,production_operator,CWI26_FG_KIT,10,CWI26_WIP,CWI26_FG,completed,,ACT-0046,ecount_reconstructed
+MFG-001,2026-06-20 13:35:00,Manufacturing,Inventory Updated,system,CWI26_FG_KIT,10,,CWI26_FG,completed,,ACT-0047,ecount_reconstructed
+O2C-001,2026-06-20 15:00:00,O2C,Sales Order Received,sales_operator,CWI26_SO_001,1,CWI26_CUSTOMER_A,CWI26_FG,completed,,ACT-0050,ecount_reconstructed
+O2C-001,2026-06-20 15:05:00,O2C,Availability Checked,system,CWI26_FG_KIT,6,CWI26_FG,CWI26_CUSTOMER_A,completed,,ACT-0051,ecount_reconstructed
+O2C-001,2026-06-20 15:20:00,O2C,Goods Issued,warehouse_operator,CWI26_FG_KIT,6,CWI26_FG,CWI26_CUSTOMER_A,completed,,ACT-0052,ecount_reconstructed
+O2C-001,2026-06-20 15:30:00,O2C,Inventory Updated,system,CWI26_FG_KIT,4,,CWI26_FG,completed,,ACT-0053,ecount_reconstructed
+P2P-002,2026-06-21 09:00:00,P2P,Purchase Order Created,buyer,CWI26_PO_002,1,CWI26_VENDOR_A,CWI26_RAW,completed,partial_receipt,ACT-0060,ecount_reconstructed
+P2P-002,2026-06-21 10:00:00,P2P,Goods Partially Received,warehouse_operator,CWI26_RM_PCB,12,CWI26_VENDOR_A,CWI26_RAW,exception,partial_receipt,ACT-0061,ecount_reconstructed
+P2P-002,2026-06-21 10:10:00,P2P,Backorder Recorded,buyer,CWI26_RM_PCB,8,CWI26_VENDOR_A,CWI26_RAW,pending,partial_receipt,ACT-0062,ecount_reconstructed
+MFG-002,2026-06-21 13:00:00,Manufacturing,Work Order Created,production_planner,CWI26_WO_002,1,,CWI26_WIP,completed,material_shortage,ACT-0070,ecount_reconstructed
+MFG-002,2026-06-21 13:05:00,Manufacturing,BOM Components Calculated,system,CWI26_FG_KIT_BOM,15,,CWI26_WIP,completed,material_shortage,ACT-0071,ecount_reconstructed
+MFG-002,2026-06-21 13:10:00,Manufacturing,Material Shortage Detected,system,CWI26_RM_SENSOR,5,CWI26_RAW,CWI26_WIP,exception,material_shortage,ACT-0072,ecount_reconstructed
+MFG-002,2026-06-21 13:30:00,Manufacturing,Work Order Put On Hold,production_planner,CWI26_WO_002,1,,CWI26_WIP,on_hold,material_shortage,ACT-0073,ecount_reconstructed
+P2P-003,2026-06-22 09:00:00,P2P,Goods Received,warehouse_operator,CWI26_RM_CASE,10,CWI26_VENDOR_A,CWI26_QC,exception,warehouse_error,ACT-0080,ecount_reconstructed
+P2P-003,2026-06-22 09:15:00,P2P,Warehouse Error Detected,warehouse_operator,CWI26_RM_CASE,10,CWI26_QC,CWI26_RAW,exception,warehouse_error,ACT-0081,ecount_reconstructed
+P2P-003,2026-06-22 09:30:00,P2P,Inventory Transfer Created,warehouse_operator,CWI26_RM_CASE,10,CWI26_QC,CWI26_RAW,completed,warehouse_error,ACT-0082,ecount_reconstructed
+MFG-003,2026-06-22 13:00:00,Manufacturing,Work Order Created,production_planner,CWI26_WO_003,1,,CWI26_WIP,completed,bom_variance,ACT-0090,ecount_reconstructed
+MFG-003,2026-06-22 13:10:00,Manufacturing,Standard BOM Usage Calculated,system,CWI26_FG_KIT_BOM,10,,CWI26_WIP,completed,bom_variance,ACT-0091,ecount_reconstructed
+MFG-003,2026-06-22 13:25:00,Manufacturing,Actual Material Usage Entered,production_operator,CWI26_RM_CABLE,22,CWI26_RAW,CWI26_WIP,exception,bom_variance,ACT-0092,ecount_reconstructed
+MFG-003,2026-06-22 13:40:00,Manufacturing,Variance Logged,production_planner,CWI26_RM_CABLE,2,CWI26_RAW,CWI26_WIP,exception,bom_variance,ACT-0093,ecount_reconstructed
+MFG-004,2026-06-23 13:00:00,Manufacturing,Work Order Created,production_planner,CWI26_WO_004,1,,CWI26_WIP,completed,qc_hold,ACT-0100,hybrid_synthetic
+MFG-004,2026-06-23 13:30:00,Manufacturing,Production Receipt Created,production_operator,CWI26_FG_KIT,10,CWI26_WIP,CWI26_QC,completed,qc_hold,ACT-0101,hybrid_synthetic
+MFG-004,2026-06-23 14:00:00,Manufacturing,QC Hold Applied,quality_checker,CWI26_FG_KIT,10,CWI26_QC,CWI26_QC,on_hold,qc_hold,ACT-0102,synthetic_only
+MFG-004,2026-06-23 16:00:00,Manufacturing,QC Released,quality_checker,CWI26_FG_KIT,10,CWI26_QC,CWI26_FG,completed,qc_hold,ACT-0103,synthetic_only
+O2C-002,2026-06-24 09:00:00,O2C,Sales Order Received,sales_operator,CWI26_SO_002,1,CWI26_CUSTOMER_A,CWI26_FG,completed,approval_delay,ACT-0110,synthetic_only
+O2C-002,2026-06-24 09:10:00,O2C,Approval Requested,sales_operator,CWI26_SO_002,1,CWI26_CUSTOMER_A,CWI26_FG,pending,approval_delay,ACT-0111,synthetic_only
+O2C-002,2026-06-24 12:30:00,O2C,Approval Completed,manager,CWI26_SO_002,1,CWI26_CUSTOMER_A,CWI26_FG,completed,approval_delay,ACT-0112,synthetic_only
+O2C-002,2026-06-24 13:00:00,O2C,Goods Issued,warehouse_operator,CWI26_FG_KIT,4,CWI26_FG,CWI26_CUSTOMER_A,completed,approval_delay,ACT-0113,synthetic_only
+MFG-005,2026-06-25 13:00:00,Manufacturing,Work Order Created,production_planner,CWI26_WO_005,1,,CWI26_WIP,completed,material_shortage_plus_qc_hold,ACT-0120,hybrid_synthetic
+MFG-005,2026-06-25 13:10:00,Manufacturing,Material Shortage Detected,system,CWI26_RM_SENSOR,3,CWI26_RAW,CWI26_WIP,exception,material_shortage,ACT-0121,ecount_reconstructed
+MFG-005,2026-06-25 15:00:00,Manufacturing,Partial Production Receipt Created,production_operator,CWI26_FG_KIT,7,CWI26_WIP,CWI26_QC,exception,qc_hold,ACT-0122,hybrid_synthetic
+MFG-005,2026-06-25 17:00:00,Manufacturing,Case Closed With Exception,production_planner,CWI26_WO_005,1,,CWI26_QC,closed_with_exception,material_shortage_plus_qc_hold,ACT-0123,hybrid_synthetic
+P2P-004,2026-06-26 09:00:00,P2P,Purchase Order Created,buyer,CWI26_PO_004,1,CWI26_VENDOR_A,CWI26_RAW,completed,partial_receipt_plus_warehouse_error,ACT-0130,ecount_reconstructed
+P2P-004,2026-06-26 10:00:00,P2P,Goods Partially Received,warehouse_operator,CWI26_RM_CASE,6,CWI26_VENDOR_A,CWI26_QC,exception,partial_receipt_plus_warehouse_error,ACT-0131,ecount_reconstructed
+P2P-004,2026-06-26 10:20:00,P2P,Warehouse Error Detected,warehouse_operator,CWI26_RM_CASE,6,CWI26_QC,CWI26_RAW,exception,warehouse_error,ACT-0132,ecount_reconstructed
+P2P-004,2026-06-26 10:40:00,P2P,Backorder Recorded,buyer,CWI26_RM_CASE,4,CWI26_VENDOR_A,CWI26_RAW,pending,partial_receipt,ACT-0133,ecount_reconstructed
