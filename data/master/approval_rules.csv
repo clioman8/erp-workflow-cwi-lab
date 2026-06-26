@@ -1,0 +1,11 @@
+rule_id,process,trigger_condition,required_role,approver_role,threshold_value,threshold_unit,approval_activity,exception_if_delayed,default_sla_minutes,cwi_factor
+APR-001,P2P,purchase_order_amount_exceeds,buyer,manager,5000000,KRW,Purchase Approval Completed,approval_delay,120,F6
+APR-002,P2P,new_vendor_used,buyer,manager,1,boolean,Vendor Approval Completed,approval_delay,240,F6
+APR-003,O2C,sales_order_amount_exceeds,sales_operator,manager,7000000,KRW,Sales Approval Completed,approval_delay,120,F6
+APR-004,O2C,urgent_order_requested,sales_operator,manager,1,boolean,Urgent Order Approval Completed,approval_delay,60,F6
+APR-005,Manufacturing,work_order_quantity_exceeds,production_planner,manager,20,EA,Work Order Approval Completed,approval_delay,180,F6
+APR-006,Manufacturing,bom_variance_detected,production_operator,production_planner,1,boolean,BOM Variance Approval Completed,bom_variance_delay,120,F4
+APR-007,Manufacturing,qc_hold_release_requested,quality_checker,manager,1,boolean,QC Release Approval Completed,qc_hold_delay,180,F5
+APR-008,Inventory,warehouse_transfer_from_qc,warehouse_operator,quality_checker,1,boolean,QC Transfer Approval Completed,warehouse_error_delay,90,F3
+APR-009,Inventory,scrap_confirmation_required,quality_checker,manager,1,boolean,Scrap Approval Completed,qc_hold_delay,240,F5
+APR-010,Finance,invoice_amount_mismatch,accountant,manager,1,boolean,Invoice Exception Approval Completed,posting_delay,180,F6
